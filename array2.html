@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar JavaScript</title>
+	</head>
+	<body>
+		
+		<p></p>
+		<p></p>
+		
+		<button onclick="tambah()">Tambah</button>
+		<button onclick="hapus()">Hapus</button>
+
+		<script>
+			var text = ["hai", "halo", "hello"];
+			document.getElementsByTagName("p")[0].innerHTML = "<b>Text: </b>" + text;
+
+			function tambah (){
+
+				document.getElementsByTagName("p")[1].innerHTML = text.push("hello");
+				document.getElementsByTagName("p")[1].innerHTML = text;
+			}
+
+			function hapus (){
+				document.getElementsByTagName("p")[1].innerHTML =text.pop();
+				document.getElementsByTagName("p")[1].innerHTML = text;
+			}
+			
+		</script>
+		
+	</body>
+ 
+</html>
