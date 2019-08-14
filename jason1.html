@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = '{"user" : "Riza", "nama" : "Riza Mahendra Lubis", "jenis kelamin" : "Laki-laki"}';
+		b = JSON.parse(a);
+
+console.log(b);
+console.log(b.nama);
+
+localStorage.user=b.nama;
+document.write(localStorage.user);
+</script>
+
+</body>
+</html>
