@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Axios</title>
+</head>
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+	<script>
+
+// Make a request for a user with a given ID
+axios.get('https://jsonplaceholder.typicode.com/posts')
+.then(function (response) {
+    // handle success
+   
+    let data = response.data
+
+    document.write("<table width = '900' align = 'center' cellpadding = '10'>")
+    document.write('<tr style = "text-align : center; background : #c2fffd; font-size : 20px"><th>'+ 'UserId')
+    document.write('<td>'+ '<b>Id</b>' + '</td>')
+    document.write('<td>'+ '<b>Title</b>' + '</td>')
+    document.write('<td>'+ '<b>Body</b>' + '</td>')
+    document.write('</tr></th>')
+    console.log(data)
+    for (var i = 0; i <= data.length; i++) {
+    	document.write('<tr style="background:#dbdbd9; height:50px;">')
+    	document.write('<td style="text-align:center;">' + data[i].userId + ' </td>')
+    	document.write('<td style="text-align:center;">' + data[i].id + ' </td>')
+    	document.write('<td>' + data[i].title + ' </td>')
+    	document.write('<td>' + data[i].body + ' </td>')
+    	document.write('</tr>')
+    }
+    
+    document.write('</table>')
+})
+.catch(function (error) {
+    // handle error
+    console.log(error);
+})
+</script>
+</body>
+</html>
