@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+	<script type="text/javascript">
+
+		const baseApi = 'http://192.168.100.82:8001/api/v1/'
+		var classroomId = 1
+		axios.patch(baseApi + 'classroom', {
+			name: '2 TKJ 5',
+			whiteboard: '1',
+			teacher_desk: '1',
+			student_seat: '40'
+		})
+		.then(function (response) {
+			let data = response.data
+			console.log(data);
+
+		})
+		.catch(function (error) {
+			alert(error);
+		});
+	</script>
+</body>
+</html>
